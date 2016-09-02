@@ -10,15 +10,10 @@
 
 class perceptronModel{
 
-
-
 public static void main(String args[]){   
-
     // init(String type, double weight0, double weight1, double coefficient, double threshold)
     new perceptronModel().init("NOR", 0.2, 0.9, 0.5, -2);
-
 }
-
 
 
 // MARK : returns input vlaue (fixed set)
@@ -29,9 +24,7 @@ int[] getInputWeight0(){
 int[] getInputWeight1(){
    return new int[] {0, 1, 0, 1};
 }
-int[] getInput(){
-   return new int[] {0,0, 0,1, 1,0, 1,1};
-}
+
 
 // MARK : returns target set, depends on the type of the operation. 
 int[] getTarget(String type){
