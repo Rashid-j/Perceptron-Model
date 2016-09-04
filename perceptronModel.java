@@ -76,11 +76,11 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
    
    int targetSet[] = pm.getTarget(type);
    int itsDone[] = targetSet;
-   int acualSet[] = new int[4];
+   int actualSet[] = new int[4];
    int counter = 0;
    
 
-   while( !pm.isEqual(type, acualSet) ){
+   while( !pm.isEqual(type, actualSet) ){
    
       System.out.print("\n============   Epoch #" + counter + "   ============\n\n");
 
@@ -91,11 +91,11 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
          double addition = var0 + var1;
       
          // get the actual value
-         acualSet[i] = pm.getActual(addition, threshold);
+         actualSet[i] = pm.getActual(addition, threshold);
 
          // update weights
-         weight0 = pm.updateWeight(inputWeight0[i], targetSet[i], acualSet[i], coefficient, weight0);
-         weight1 = pm.updateWeight(inputWeight1[i], targetSet[i], acualSet[i], coefficient, weight1);
+         weight0 = pm.updateWeight(inputWeight0[i], targetSet[i], actualSet[i], coefficient, weight0);
+         weight1 = pm.updateWeight(inputWeight1[i], targetSet[i], actualSet[i], coefficient, weight1);
       
      
          System.out.println("weights = (" + weight0 + ", " + weight1 + ")");
@@ -107,12 +107,12 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
 
    }
     
-    if(pm.isEqual(type, acualSet)){
+    if(pm.isEqual(type, actualSet)){
      
      System.out.println("\n========================");
      System.out.println("\nTarget   Actual");     
      for(int i=0; i < targetSet.length; i++)
-         System.out.println("  " + targetSet[i] + "       " + acualSet[i]);
+         System.out.println("  " + targetSet[i] + "       " + actualSet[i]);
          
      System.out.println("\n** Final Weights : (" + weight0 + ", " + weight1 + ")");
 
@@ -121,7 +121,7 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
          System.out.println("\nTarget   Actual");
          
          for(int i=0; i < targetSet.length; i++)
-           System.out.println("  " + targetSet[i] + "       " + acualSet[i]);
+           System.out.println("  " + targetSet[i] + "       " + actualSet[i]);
            
          System.out.println("\nThere is no \"Satisfy\" answer.");
 
