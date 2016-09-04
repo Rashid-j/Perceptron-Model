@@ -13,7 +13,7 @@ Machine Learning Model (Perceptron Model)
 2. Learning coefficient is 0.6.
 3. Threshold value is 2.
 
-## How to solve
+## Usage
 ###Modify init() with the proper parameters
 
 ```java
