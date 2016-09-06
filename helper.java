@@ -1,6 +1,15 @@
+/*
+*  
+*  Author  : Rashid A. Aljohani
+*  Advisor : Byoung Jik Lee
+*  CS 549  : Topics in Artificial Intelligence
+*  Homework #1
+*  Thursday, September 1, 2016
+*
+*/
+
 class helper{
-
-
+   
 // MARK : returns target set, depends on the type of the operation. 
 int[] getTarget(String type){
    
@@ -47,7 +56,6 @@ boolean isEqual(String type, int[] actualSet){
    return true;
 }
 
-
 // MARK : returns the results
 void init(String type, double weight0, double weight1, double coefficient, double threshold){
 
@@ -61,7 +69,6 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
    int actualSet[] = new int[4];
    int counter = 0;
    
-
    while( !help.isEqual(type, actualSet) ){
    
       System.out.print("\n============   Epoch #" + counter + "   ============\n\n");
@@ -78,10 +85,8 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
          // update weights
          weight0 = help.updateWeight(inputWeight0[i], targetSet[i], actualSet[i], coefficient, weight0);
          weight1 = help.updateWeight(inputWeight1[i], targetSet[i], actualSet[i], coefficient, weight1);
-      
-     
+   
          System.out.println("weights = (" + weight0 + ", " + weight1 + ")");
-
       }
       
       counter++;
@@ -98,7 +103,6 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
          
      System.out.println("\n** Final Weights : (" + weight0 + ", " + weight1 + ")");
 
-    
     }else{
          System.out.println("\nTarget   Actual");
          
@@ -109,6 +113,5 @@ void init(String type, double weight0, double weight1, double coefficient, doubl
 
     }      
    }
-
 
 }
