@@ -1,9 +1,6 @@
 /*
 *  
 *  Author  : Rashid A. Aljohani
-*  Advisor : Byoung Jik Lee
-*  CS 549  : Topics in Artificial Intelligence
-*  Homework #1
 *  Thursday, September 1, 2016
 *
 */
